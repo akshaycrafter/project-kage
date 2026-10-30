@@ -1,0 +1,23 @@
+/* Kage is a full-viewport, scroll-driven experience. The KageLandingPage
+   component renders a sandboxed iframe that owns its own document, Three.js
+   world and scroll behaviour, so the host shell is a fixed, full-bleed frame
+   that simply holds that iframe. All scrolling happens inside the iframe. */
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: #05070a; /* matches the Kage page's ink so the load-in is seamless */
+}
+
+/* The frame the KageLandingPage fills. */
+.shader-frame {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  background: #05070a;
+}
